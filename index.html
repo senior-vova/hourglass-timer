@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./sass/main.css">
+    <title>Hourglass Timer</title>
+</head>
+<body>
+    <div class="content">
+        <div class="header">
+            <h1>Hourglass Timer</h1>
+            <h2 class="time">00:00</h2>
+        </div>
+        <div class="hourglass">
+            <div class="border-top"></div>
+            <div class="glass">
+                <div class="top">
+                    <div class="sand"></div>
+                </div>
+                <div class="bottom">
+                    <div class="sand-down"></div>
+                    <div class="sand"></div>
+                </div>
+            </div>
+            <div class="border-bottom"></div>
+        </div>
+        <div class="timer-block">
+            <div class="top">
+                <input id="timeInput" type="number" placeholder="time">
+                <button id="startBtn">Start</button>
+            </div>
+            <div class="bottom">
+                <select name="timeType" id="timeType">
+                    <option value="seconds">Seconds</option>
+                    <option value="minutes">Minutes</option>
+                </select>
+                <button id="stopBtn">Stop</button>
+            </div>
+        </div>
+    </div>
+    <script src="./main.js"></script>
+</body>
+</html>

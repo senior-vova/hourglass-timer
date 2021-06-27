@@ -1,0 +1,130 @@
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+.content
+    width: 100vw
+    height: 100vh
+    background-color: #cef0d1
+    display: flex
+    flex-direction: column
+    justify-content: space-evenly
+    align-items: center
+    .header
+        display: flex
+        flex-direction: column
+        align-items: center
+        .time
+            margin-top: 10px
+    .hourglass
+        width: 300px
+        height: 50vh
+        .border-top, .border-bottom
+            width: 100%
+            height: 8%
+            background-color: #AA8278
+            border: 5px solid #000
+            border-radius: 15px
+        .glass
+            width: 85%
+            margin: 0 auto
+            height: 84%
+            .top, .bottom
+                height: 50%
+                border: 4px solid #000
+                box-shadow: inset 0px 0px 20px #cdf1ff
+                background-color: #82CFED
+                position: relative
+                overflow: hidden
+                .sand
+                    position: absolute
+                    left: 0
+                    right: 0
+                    background-color: #F4BF1B
+                    border-top: 3px solid #E1AA29
+            .top
+                border-top: none
+                border-bottom-left-radius: 50% 100%
+                border-bottom-right-radius: 50% 100%
+                .sand
+                    bottom: 0
+                    height: 65%
+            .bottom
+                border-bottom: none
+                border-top-left-radius: 50% 100%
+                border-top-right-radius: 50% 100%
+                .sand
+                    bottom: 0
+                    height: 0%
+                    border: none
+                .sand-down
+                    position: absolute
+                    width: 10px
+                    height: 0%
+                    top: 0
+                    left: 48%
+                    border-bottom-right-radius: 5px
+                    border-bottom-left-radius: 5px
+                    background-color: #F4BF1B
+    .timer-block
+        display: flex
+        flex-direction: column
+        align-items: center
+        input, button, select
+            font-size: 20px
+            padding: 5px 10px
+            border-radius: 5px
+            border: 1px solid black
+            background-color: white
+        .top, .bottom
+            width: 250px
+            padding: 5px 0
+            display: flex
+            justify-content: space-between
+            align-items: center
+        input
+            width: 80px
+        button
+            &:hover
+                background-color: #A3DFF5
+                cursor: pointer
+
+@keyframes sand-anim-1
+    0%
+        height: 0%
+    50%
+        height: 50%
+    100%
+        height: 100%
+
+@keyframes sand-anim-2
+    0%
+        height: 100%
+    90%
+        top: 0
+        height: 100%
+    100%
+        border-top-right-radius: 5px
+        border-top-left-radius: 5px
+        bottom: 0
+        top: 50%
+
+@keyframes fill-sand
+    0%
+        height: 0%
+        border-top: 3px solid #E1AA29
+    80%
+        height: 50%
+    100%
+        border-top: 3px solid #E1AA29
+        height: 55%
+
+@keyframes leak-sand
+    0%
+        height: 65%
+    95%
+        border-top: 3px solid #E1AA29
+    100%
+        height: 0%
+        border-top: none
