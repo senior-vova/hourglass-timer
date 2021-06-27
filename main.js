@@ -12,12 +12,12 @@ let timer = null;
 let startLeakSandTimeout = null;
 
 startBtn.addEventListener("click", () => {
-    startBtn.disabled = true;
-    timeOutput.textContent = "00:00";
     const timeTypeOption = timeType.value;
     let time = timeTypeOption == "minutes" ? timeInput.value * 60 : timeInput.value;
 
     if(time && time > 0){
+        timeOutput.textContent = "00:00";
+        startBtn.disabled = true;
         topSand.style.animation = `leak-sand ${time}s cubic-bezier(.5,.5,.6,.9) 1s infinite normal both`;
         sandDown.style.animation = `sand-anim-1 1s cubic-bezier(.5,.5,.5,.5) 1s infinite normal both`;
         startLeakSandTimeout = setTimeout(()=>{
