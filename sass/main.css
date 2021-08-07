@@ -37,7 +37,7 @@
           align-items: center;
 }
 
-.content .header .time {
+.content .header #time {
   margin-top: 10px;
 }
 
@@ -156,31 +156,25 @@
   cursor: pointer;
 }
 
-@-webkit-keyframes sand-anim-1 {
+@-webkit-keyframes jet-sand-anim {
   0% {
     height: 0%;
-  }
-  50% {
-    height: 50%;
   }
   100% {
     height: 100%;
   }
 }
 
-@keyframes sand-anim-1 {
+@keyframes jet-sand-anim {
   0% {
     height: 0%;
-  }
-  50% {
-    height: 50%;
   }
   100% {
     height: 100%;
   }
 }
 
-@-webkit-keyframes sand-anim-2 {
+@-webkit-keyframes jet-sand-second-anim {
   0% {
     height: 100%;
   }
@@ -196,7 +190,7 @@
   }
 }
 
-@keyframes sand-anim-2 {
+@keyframes jet-sand-second-anim {
   0% {
     height: 100%;
   }
